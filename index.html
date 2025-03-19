@@ -14,73 +14,13 @@
             padding: 0;
             transition: background 0.3s, color 0.3s;
         }
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #2a2a2a;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-        }
-        .profile-info {
-            flex: 1;
-            text-align: left;
-        }
-        .profile-info h1 {
-            font-size: 3em;
-            color: #ff99cc;
-            margin-bottom: 10px;
-        }
-        .profile-info p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-        .profile-info a {
-            display: inline-block;
-            margin-top: 15px;
-            background: #ff99cc;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: 0.3s ease;
-            font-size: 1em;
-        }
-        .profile-info a:hover {
-            background: #e04b76;
-        }
-        .profile-image img {
-            width: 300px;
-            height: auto;
-            border-radius: 50%;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .social-icons a {
-            color: #ff99cc;
-            font-size: 1.5em;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .social-icons a:hover {
-            color: #e04b76;
-        }
-        .section {
+        .container, .section {
             max-width: 1000px;
             margin: 50px auto;
             padding: 20px;
             background: #2a2a2a;
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 40px;
         }
         h2 {
             color: #ff99cc;
@@ -94,6 +34,28 @@
             font-size: 1.2em;
             margin: 10px 0;
         }
+        .profile-info {
+            text-align: left;
+        }
+        .profile-info h1 {
+            font-size: 3em;
+            color: #ff99cc;
+        }
+        .profile-image img {
+            width: 300px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #ff99cc;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -104,13 +66,19 @@
             <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
             <div class="social-icons">
                 <a href="https://github.com/sdixon4" target="_blank">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" target="_blank">🔗 LinkedIn</a>
                 <a href="mailto:sdixon4@hawaii.edu" target="_blank">📨 Email</a>
             </div>
-            <a href="#contact">Let's Connect</a>
+            <a href="resume.pdf" class="resume-button" target="_blank">Download Resume</a>
         </div>
         <div class="profile-image">
             <img src="avatar.png" alt="Shelby Dixon Avatar">
         </div>
+    </div>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>Hi! I'm Shelby Dixon, a Computer Engineering student at UH Manoa with a passion for AI, Robotics, and Cybersecurity. I thrive at the intersection of software and hardware, working on projects that integrate embedded AI, FPGA acceleration, and AI security applications. I'm currently involved in high-power rocketry through First Nations Launch and RockSat-X, pushing the boundaries of aerospace engineering with AI-driven innovations. When I'm not programming, you'll find me experimenting with Raspberry Pi robotics or diving into AI security research. My goal is to contribute to cutting-edge AI and cybersecurity advancements while bridging the gap between machine intelligence and real-world applications.</p>
     </div>
 
     <div class="section">
@@ -127,13 +95,23 @@
 
     <div class="section">
         <h2>Projects</h2>
-        <ul>
-            <li><strong>AI-Powered Raspberry Pi Robot:</strong> Object detection & voice control with TensorFlow Lite.</li>
-            <li><strong>AI Malware Detector:</strong> Cybersecurity tool using ML for threat detection.</li>
-            <li><strong>FPGA AI Accelerator:</strong> Hardware-optimized AI inference with Verilog & TensorFlow.</li>
-            <li><strong>First Nations Launch High Power Rocketry:</strong> Currently working on high-power rocketry for 2025.</li>
-            <li><strong>RockSat-X:</strong> Working on NASA's RockSat-X project for 2025.</li>
-        </ul>
+        <div class="projects-container">
+            <div class="project-card"><strong>AI-Powered Raspberry Pi Robot:</strong> Object detection & voice control with TensorFlow Lite.</div>
+            <div class="project-card"><strong>AI Malware Detector:</strong> Cybersecurity tool using ML for threat detection.</div>
+            <div class="project-card"><strong>FPGA AI Accelerator:</strong> Hardware-optimized AI inference with Verilog & TensorFlow.</div>
+            <div class="project-card"><strong>First Nations Launch High Power Rocketry:</strong> Currently working on high-power rocketry for 2025.</div>
+            <div class="project-card"><strong>RockSat-X:</strong> Working on NASA's RockSat-X project for 2025.</div>
+        </div>
+    </div>
+
+    <div class="section contact-form">
+        <h2>Contact Me</h2>
+        <form action="mailto:sdixon4@hawaii.edu" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 </body>
 </html>
