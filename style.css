@@ -1,53 +1,67 @@
-/* Sidebar Profile Picture */
-.sidebar {
-    text-align: center;
-    padding: 20px;
+body {
+    font-family: 'Poppins', sans-serif;
     background-color: #1E1E2F;
-    border-right: 2px solid #5D9CEC;
-    height: 100vh;
-    position: fixed;
-    width: 250px;
-}
-
-.sidebar h1 {
     color: #EAEAEA;
-    font-size: 24px;
-    margin-top: 10px;
+    text-align: center;
 }
 
-.sidebar p {
-    color: #A8A8A8;
-    font-size: 14px;
+header {
+    padding: 20px;
+    background: #2C2C3E;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
 }
 
-.profile-pic {
+.profile img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    object-fit: cover;
     border: 3px solid #5D9CEC;
 }
 
-/* About Page */
-.about-pic {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    display: block;
-    margin: 20px auto;
+.profile h1 {
+    font-size: 26px;
+    color: #FFC857;
 }
 
-/* General Button */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #5D9CEC;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+nav {
     margin-top: 10px;
 }
 
-.btn:hover {
-    background-color: #427BCE;
+nav a {
+    color: #5D9CEC;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 40px;
+}
+
+section {
+    background: #2C2C3E;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.button {
+    display: inline-block;
+    background: #5D9CEC;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background: #4A8BDC;
 }
 
