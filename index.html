@@ -8,103 +8,121 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background-color: #fef8f8;
+            background-color: #f8f9fa;
             color: #333;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             transition: background 0.3s, color 0.3s;
         }
-        header {
-            background: linear-gradient(to right, #ff758c, #ff7eb3);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        section {
-            margin: 20px 0;
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: auto;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
         }
-        a {
-            color: #ff758c;
-            text-decoration: none;
-            font-weight: bold;
+        .profile-info {
+            flex: 1;
+            text-align: left;
         }
-        a:hover {
-            text-decoration: underline;
+        .profile-info h1 {
+            font-size: 3em;
+            color: #ff5e8d;
+            margin-bottom: 10px;
         }
-        button {
-            background: #ff758c;
+        .profile-info p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .profile-info a {
+            display: inline-block;
+            margin-top: 15px;
+            background: #ff5e8d;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
             transition: 0.3s ease;
+            font-size: 1em;
         }
-        button:hover {
-            background: #ff4e70;
+        .profile-info a:hover {
+            background: #e04b76;
         }
-        /* Dark Mode Styles */
+        .profile-image img {
+            width: 300px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
         .dark-mode {
             background-color: #1a1a1a;
             color: #fef8f8;
         }
-        .dark-mode section {
+        .dark-mode .container {
             background: #2a2a2a;
             color: #fef8f8;
         }
-        .dark-mode header {
-            background: linear-gradient(to right, #660033, #99004d);
-        }
-        .dark-mode a {
+        .dark-mode h1 {
             color: #ff99cc;
         }
+        .dark-mode a {
+            background: #ff99cc;
+        }
         .toggle-container {
-            margin: 20px;
-            text-align: right;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #ff5e8d;
+            font-size: 1.5em;
+            transition: 0.3s;
+        }
+        .social-icons a:hover {
+            color: #e04b76;
         }
     </style>
 </head>
 <body>
     <div class="toggle-container">
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
     </div>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>I'm Shelby Dixon, a Computer Engineering student specializing in AI, Robotics, and Cybersecurity.</p>
-        <button onclick="window.location.href='#contact'">Get in Touch</button>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Currently building an AI-powered Raspberry Pi Robot with computer vision & embedded AI. Passionate about cybersecurity, AI security, robotics, and hardware acceleration.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>AI-Powered Raspberry Pi Robot:</strong> Object detection & voice control with TensorFlow Lite.</li>
-            <li><strong>AI Malware Detector:</strong> Cybersecurity tool using ML for threat detection.</li>
-            <li><strong>FPGA AI Accelerator:</strong> Hardware-optimized AI inference with Verilog & TensorFlow.</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:sdixon4@hawaii.edu">sdixon4@hawaii.edu</a></p>
-    </section>
-
+    <div class="container">
+        <div class="profile-info">
+            <h1>Shelby Dixon</h1>
+            <p>Computer Engineering Student | AI | Robotics | Cybersecurity</p>
+            <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank">🔗 LinkedIn</a>
+                <a href="#" target="_blank">🐙 GitHub</a>
+                <a href="#" target="_blank">📨 Email</a>
+            </div>
+            <a href="#contact">Let's Connect</a>
+        </div>
+        <div class="profile-image">
+            <img src="avatar.png" alt="Shelby Dixon Avatar">
+        </div>
+    </div>
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
         }
+        window.onload = function () {
+            if (localStorage.getItem("darkMode") === "true") {
+                document.body.classList.add("dark-mode");
+            }
+        };
     </script>
 </body>
 </html>
