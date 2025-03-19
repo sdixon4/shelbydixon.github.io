@@ -8,32 +8,44 @@
 </head>
 <body>
     <header>
-        <div class="profile">
-            <img src="images/profile.jpg" alt="Shelby Dixon">
-            <h1>Shelby Dixon</h1>
-            <p>Computer Engineering | AI | Robotics | Cybersecurity</p>
-            <p>Former organic farmer turned engineer, building AI-powered Raspberry Pi robots, 
-               exploring AI security, and FPGA programming.</p>
-        </div>
+        <h1>Shelby Dixon</h1>
+        <p>Computer Engineering Student | AI | Robotics | Cybersecurity</p>
         <nav>
-            <a href="about.html">About Me</a>
-            <a href="resume.pdf" download>Download Resume</a>
-            <a href="projects.html">Projects</a>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="fnl2025.html">First Nations Launch</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Projects</h2>
-            <p>Check out my work in AI, Robotics, and Cybersecurity.</p>
-            <a href="projects.html" class="button">View Projects</a>
-        </section>
+    <section class="profile-container">
+        <img src="images/profile.jpg" alt="Shelby Dixon" class="profile-pic">
+        <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
+    </section>
 
-        <section>
-            <h2>Interactive Resume</h2>
-            <p>Explore my experience dynamically.</p>
-            <a href="resume.html" class="button">View Resume</a>
-        </section>
-    </main>
+    <section class="skills">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Python, C, C++, Git, Verilog</li>
+            <li>FPGA Acceleration, AI/ML, Cybersecurity</li>
+            <li>RockSim, CAD, Hardware Simulations</li>
+        </ul>
+    </section>
+
+    <!-- AI Chatbot Section -->
+    <section class="chatbot-container">
+        <h2>Ask About My Experience</h2>
+        <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)">
+        <div class="chatbot-output" id="chatbot-output"></div>
+    </section>
+
+    <footer>
+        <p>© 2025 Shelby Dixon | <a href="mailto:sdixon4@hawaii.edu">Contact Me</a></p>
+    </footer>
+
+    <script src="chatbot.js"></script>
 </body>
 </html>
+
