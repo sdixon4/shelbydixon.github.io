@@ -1,88 +1,53 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #1E1E2F;
-    color: #EAEAEA;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-/* SIDEBAR */
+/* Sidebar Profile Picture */
 .sidebar {
-    width: 250px;
-    background-color: #2C2C3E;
-    padding: 20px;
     text-align: center;
-    position: fixed;
+    padding: 20px;
+    background-color: #1E1E2F;
+    border-right: 2px solid #5D9CEC;
     height: 100vh;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: fixed;
+    width: 250px;
 }
 
-.sidebar img.profile-pic {
-    width: 100px;
+.sidebar h1 {
+    color: #EAEAEA;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.sidebar p {
+    color: #A8A8A8;
+    font-size: 14px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    border: 3px solid #5D9CEC;
 }
 
-.sidebar nav a {
+/* About Page */
+.about-pic {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
     display: block;
-    color: #FFC857;
+    margin: 20px auto;
+}
+
+/* General Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5D9CEC;
+    color: white;
     text-decoration: none;
-    margin: 10px 0;
-    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.sidebar nav a:hover {
-    color: #5D9CEC;
-}
-
-/* MAIN CONTENT */
-main {
-    margin-left: 280px; /* To prevent overlap with sidebar */
-    flex-grow: 1;
-    padding: 40px;
-}
-
-/* CONTAINERS */
-.container {
-    max-width: 800px;
-    background: #2C2C3E;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* PROJECT CARDS */
-.projects-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    background: #333;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0px 4px 8px rgba(255, 200, 87, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-a {
-    color: #5D9CEC;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+.btn:hover {
+    background-color: #427BCE;
 }
 

@@ -7,49 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="sidebar">
+        <img src="images/profile.jpg" alt="Shelby Dixon" class="profile-pic">
+        <h1>Shelby Dixon</h1>
+        <p>Computer Engineering Student | AI | Robotics | Cybersecurity</p>
+        <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
+        <a href="about.html" class="btn">About Me</a>
+        <a href="resume.pdf" class="btn">Download Resume</a>
+        <a href="projects.html" class="btn">Projects</a>
+    </div>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <img src="profile.jpg" alt="Shelby Dixon" class="profile-pic">
-        <h2>Shelby Dixon</h2>
-        <nav>
-            <a href="about.html">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#resume">Resume</a>
-            <a href="#chatbot">Chatbot</a>
-        </nav>
-    </aside>
+    <div class="main-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my projects, skills, and contributions in AI, Robotics, and Cybersecurity.</p>
 
-    <!-- MAIN CONTENT -->
-    <main>
-        <section class="hero">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Computer Engineering Student | AI | Robotics | Cybersecurity</p>
-            <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
-        </section>
-
-        <!-- PROJECTS SECTION -->
-        <section id="projects" class="container">
-            <h2>🚀 Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Adrian - AI-Powered Raspberry Pi Robot</h3>
-                    <p>Object detection & voice control using TensorFlow Lite.</p>
-                    <a href="#" class="btn">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>AI Malware Detector</h3>
-                    <p>Cybersecurity tool leveraging ML for real-time threat detection.</p>
-                    <a href="#" class="btn">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h3>FPGA AI Accelerator</h3>
-                    <p>Hardware-optimized AI inference using Verilog & TensorFlow.</p>
-                    <a href="#" class="btn">View on GitHub</a>
-                </div>
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>AI-Powered Raspberry Pi Robot</h3>
+                <p>Object detection & voice control using TensorFlow Lite.</p>
+                <a href="https://github.com/sdixon4/AI-RaspberryPi-Robot" class="btn">View on GitHub</a>
             </div>
-        </section>
-    </main>
+
+            <div class="project-card">
+                <h3>AI Malware Detector</h3>
+                <p>Cybersecurity tool leveraging ML for real-time threat detection.</p>
+                <a href="https://github.com/sdixon4/AI-Malware-Detector" class="btn">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>FPGA AI Accelerator</h3>
+                <p>Hardware-optimized AI inference using Verilog & TensorFlow.</p>
+                <a href="https://github.com/sdixon4/FPGA-AI-Accelerator" class="btn">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>First Nations Launch High Power Rocketry</h3>
+                <p>Developing aerospace solutions and AI-powered rocket control systems.</p>
+                <a href="https://github.com/sdixon4/First-Nations-Launch" class="btn">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 
 </body>
 </html>
