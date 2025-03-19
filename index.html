@@ -5,56 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelby Dixon - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="chatbot.js" defer></script>
+    <script defer src="chatbot.js"></script>
+    <script defer src="theme-toggle.js"></script>
 </head>
 <body>
 
-    <nav>
-        <h1>Shelby Dixon</h1>
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.pdf" download>Resume</a></li>
-        </ul>
-    </nav>
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <label class="switch">
+            <input type="checkbox" id="toggle-theme">
+            <span class="slider"></span>
+        </label>
+    </div>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>From organic farming to engineering, I specialize in **AI, Robotics, Cybersecurity, and Aerospace**.</p>
-        <a href="about.html" class="btn">Learn More</a>
-    </section>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Left Section (Navigation & Info) -->
+        <div class="left-panel">
+            <h1 class="name">Shelby Dixon</h1>
+            <p class="title">Computer Engineering | AI | Cybersecurity | Robotics</p>
 
-    <section class="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <span>C</span> <span>C++</span> <span>Python</span> <span>Arduino</span> <span>FPGA</span> 
-            <span>TensorFlow</span> <span>RockSim</span> <span>Altium</span> <span>Aladdin Software</span> <span>LTSpice</span>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resume.pdf" target="_blank">Resume</a></li>
+                </ul>
+            </nav>
+
+            <div class="contact-info">
+                <p>Email: <a href="mailto:sdixon4@hawaii.edu">sdixon4@hawaii.edu</a></p>
+                <p>GitHub: <a href="https://github.com/sdixon4" target="_blank">github.com/sdixon4</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" target="_blank">LinkedIn</a></p>
+            </div>
         </div>
-    </section>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <a href="rocksat-x.html" class="project-card">
-                <h3>🚀 RockSat-X 2025</h3>
-                <p>NASA Sounding Rocket Experiment</p>
-            </a>
-            <a href="fnl.html" class="project-card">
-                <h3>🚀 First Nations Launch</h3>
-                <p>High-Powered Rocketry Team</p>
-            </a>
+        <!-- Right Section (Content) -->
+        <div class="right-panel">
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <div class="project">
+                    <h3><a href="fnl.html">First Nations Launch (FNL) 2025</a></h3>
+                    <p>Simulations & Motor Lead for high-power rocketry competition.</p>
+                </div>
+
+                <div class="project">
+                    <h3><a href="rocksatx.html">RockSat-X 2025</a></h3>
+                    <p>Project Lead for Mobius Camera system for NASA’s sounding rocket program.</p>
+                </div>
+
+                <div class="project">
+                    <h3><a href="adrian.html">Adrian - AI Raspberry Pi Robot</a></h3>
+                    <p>Developing an AI-powered Raspberry Pi robot for object detection & voice commands.</p>
+                </div>
+            </section>
+
+            <section id="chatbot">
+                <h2>Ask About My Experience</h2>
+                <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects...">
+                <div class="chatbot-output" id="chatbot-output"></div>
+            </section>
         </div>
-    </section>
-
-    <section class="chatbot">
-        <h2>Ask About My Experience</h2>
-        <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)">
-        <div id="chatbot-output"></div>
-    </section>
-
-    <footer>
-        <p>© 2025 Shelby Dixon</p>
-    </footer>
+    </div>
 
 </body>
 </html>
