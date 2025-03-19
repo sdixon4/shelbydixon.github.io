@@ -6,86 +6,70 @@
     <title>Shelby Dixon - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0A192F;
-            color: #F5F5F5;
-            margin: 0;
-            padding: 0;
-            transition: background 0.3s, color 0.3s;
-        }
-        .container, .section {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #112240;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #64FFDA;
-            text-align: center;
-        }
-        .profile-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            max-width: 800px;
-            margin: 40px auto;
-        }
-        .profile-text {
-            max-width: 500px;
-        }
-        .profile-image {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #64FFDA;
-            opacity: 0.9;
-            margin-bottom: 15px;
-        }
-        .chatbot-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #112240;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .chatbot-output {
-            background: #233554;
-            color: #F5F5F5;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="profile-container">
-        <img src="IMG_7188.remini-enhanced.jpg" alt="Shelby Dixon" class="profile-image">
-        <div class="profile-text">
-            <h1>Shelby Dixon</h1>
-            <p>Computer Engineering Student | AI | Robotics | Cybersecurity</p>
+
+    <!-- NAVIGATION -->
+    <header>
+        <h1>Shelby Dixon</h1>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#chatbot">Chatbot</a>
+        </nav>
+    </header>
+
+    <!-- ABOUT ME -->
+    <section class="hero">
+        <div class="container">
+            <h2>Computer Engineering Student | AI | Robotics | Cybersecurity</h2>
             <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="chatbot-container">
-        <h2>Ask About My Experience</h2>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="container">
+        <h2>🚀 Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Adrian - AI-Powered Raspberry Pi Robot</h3>
+                <p>Object detection & voice control using TensorFlow Lite.</p>
+                <a href="#" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>AI Malware Detector</h3>
+                <p>Cybersecurity tool leveraging ML for real-time threat detection.</p>
+                <a href="#" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>FPGA AI Accelerator</h3>
+                <p>Hardware-optimized AI inference using Verilog & TensorFlow.</p>
+                <a href="#" class="btn">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="container">
+        <h2>📄 Interactive Resume</h2>
+        <div class="resume-filters">
+            <button onclick="filterResume('skills')">Skills</button>
+            <button onclick="filterResume('projects')">Projects</button>
+            <button onclick="filterResume('experience')">Experience</button>
+        </div>
+        <div id="resume-content" class="resume-content">
+            <p>Select a filter above to view specific resume sections.</p>
+        </div>
+    </section>
+
+    <!-- CHATBOT -->
+    <section id="chatbot" class="chatbot-container">
+        <h2>🤖 Ask About My Experience</h2>
         <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)">
         <div class="chatbot-output" id="chatbot-output"></div>
-    </div>
+    </section>
 
     <script>
-        async function loadModel() {
-            console.log("AI Model Loaded (Future Expansion)");
-        }
-        
         function handleKeyPress(event) {
             if (event.key === 'Enter') {
                 let input = document.getElementById("chatbot-input").value.toLowerCase();
@@ -93,13 +77,9 @@
                 let response = "I'm still learning! Please check my resume or projects for details.";
 
                 const responses = {
-                    "skills": "I have experience in AI, Robotics, Cybersecurity, and FPGA programming. I work with Python, C++, Verilog, and TensorFlow.",
-                    "projects": "Some of my key projects include Adrian (AI-powered Raspberry Pi robot), AI-Enhanced Network Intrusion Detection, and AI-Powered Phishing Detector.",
-                    "experience": "I'm a Computer Engineering student at UH Manoa, working on AI-driven hardware and cybersecurity projects.",
-                    "robot": "I built Adrian, my AI-powered Raspberry Pi robot, which integrates computer vision and voice command functionality.",
-                    "fpga": "I work on FPGA acceleration projects using Verilog and TensorFlow Lite for AI inference optimization.",
-                    "cybersecurity": "I am developing AI-driven security solutions, including an AI-Enhanced Network Intrusion Detection System and an AI-Powered Phishing Detector.",
-                    "resume": "You can download my resume using the 'Download Resume' button on my site!"
+                    "skills": "I have experience in AI, Robotics, Cybersecurity, and FPGA programming.",
+                    "projects": "Key projects: Adrian (AI-powered Raspberry Pi robot), AI-Enhanced Network Intrusion Detection, FPGA AI Accelerator.",
+                    "experience": "I'm a Computer Engineering student at UH Manoa, focusing on AI-driven hardware and cybersecurity projects.",
                 };
                 
                 for (let key in responses) {
@@ -112,9 +92,19 @@
                 output.innerHTML = `<p>${response}</p>`;
             }
         }
-        
-        loadModel(); 
+
+        function filterResume(category) {
+            let content = document.getElementById("resume-content");
+            let data = {
+                "skills": "<ul><li>AI & Machine Learning</li><li>Cybersecurity</li><li>Embedded Systems</li></ul>",
+                "projects": "<ul><li>AI-Powered Raspberry Pi Robot</li><li>AI Malware Detector</li><li>FPGA AI Accelerator</li></ul>",
+                "experience": "<p>Computer Engineering student at UH Manoa, working on AI-driven hardware and cybersecurity projects.</p>"
+            };
+
+            content.innerHTML = data[category] || "<p>Select a filter above.</p>";
+        }
     </script>
+
 </body>
 </html>
 
