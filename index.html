@@ -5,47 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelby Dixon - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="chatbot.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Shelby Dixon</h1>
-        <p>Computer Engineering Student | AI | Robotics | Cybersecurity</p>
-        <nav>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="fnl2025.html">First Nations Launch</a></li>
-                <li><a href="resume.pdf" target="_blank">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="profile-container">
-        <img src="images/profile.jpg" alt="Shelby Dixon" class="profile-pic">
-        <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
+    <!-- Navigation -->
+    <nav>
+        <h1>Shelby Dixon</h1>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.pdf" download>Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I’m an **Organic Farmer turned Computer Engineer**, passionate about **AI, Robotics, Cybersecurity, and Aerospace**.  
+            Currently, I work on **RockSat-X 2025** as a **Project Lead for the Mobius Camera System**, and serve as a **Simulations & Motor Lead** for the **First Nations Launch (FNL) Rocketry Team**.
+        </p>
+        <a href="about.html" class="btn">Learn More</a>
     </section>
 
+    <!-- Skills Section -->
     <section class="skills">
         <h2>Technical Skills</h2>
-        <ul>
-            <li>Python, C, C++, Git, Verilog</li>
-            <li>FPGA Acceleration, AI/ML, Cybersecurity</li>
-            <li>RockSim, CAD, Hardware Simulations</li>
-        </ul>
+        <div class="skills-grid">
+            <span>C</span>
+            <span>C++</span>
+            <span>Python</span>
+            <span>Arduino</span>
+            <span>FPGA (Verilog)</span>
+            <span>TensorFlow</span>
+            <span>RockSim</span>
+            <span>Altium Designer</span>
+            <span>Aladdin Software</span>
+            <span>LTSpice</span>
+        </div>
     </section>
 
-    <!-- AI Chatbot Section -->
-    <section class="chatbot-container">
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <a href="rocksat-x.html" class="project-card">
+                <h3>🚀 RockSat-X 2025</h3>
+                <p>NASA Sounding Rocket Experiment</p>
+            </a>
+            <a href="fnl.html" class="project-card">
+                <h3>🚀 First Nations Launch</h3>
+                <p>High-Powered Rocketry Team</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section class="chatbot">
         <h2>Ask About My Experience</h2>
         <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)">
-        <div class="chatbot-output" id="chatbot-output"></div>
+        <div id="chatbot-output"></div>
     </section>
 
-    <footer>
-        <p>© 2025 Shelby Dixon | <a href="mailto:sdixon4@hawaii.edu">Contact Me</a></p>
-    </footer>
-
-    <script src="chatbot.js"></script>
 </body>
 </html>
 
