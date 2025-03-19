@@ -71,26 +71,15 @@
             font-size: 1.5em;
             text-decoration: none;
         }
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .project-card {
-            background: #333;
-            border-radius: 10px;
-            padding: 20px;
-            width: 48%;
-            margin: 10px 0;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(255, 153, 204, 0.3);
-        }
-        .project-card img {
-            width: 100%;
-            border-radius: 10px;
+        .resume-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #ff99cc;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -105,12 +94,19 @@
                 <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" target="_blank">🔗 LinkedIn</a>
                 <a href="mailto:sdixon4@hawaii.edu" target="_blank">📨 Email</a>
             </div>
+            <a href="resume.pdf" class="resume-button" target="_blank">Download Resume</a>
         </div>
         <div class="profile-image">
             <img src="avatar.png" alt="Shelby Dixon Avatar">
         </div>
     </div>
-
+    
+    <div class="section">
+        <h2>About Me</h2>
+        <p>Hi! I'm Shelby Dixon, a Computer Engineering student at UH Manoa with a passion for AI, Robotics, and Cybersecurity. I thrive at the intersection of software and hardware, working on projects that integrate embedded AI, FPGA acceleration, and AI security applications. I'm currently involved in high-power rocketry through First Nations Launch and RockSat-X, pushing the boundaries of aerospace engineering with AI-driven innovations.</p>
+        <p>When I'm not programming, I love baking homemade bread, exploring the outdoors, and spending time with my dog. I have a deep appreciation for hands-on projects, whether it's building a Raspberry Pi robot or crafting something new in the kitchen. I also enjoy traveling and learning about different cultures, always looking for my next adventure. My goal is to contribute to cutting-edge AI and cybersecurity advancements while bridging the gap between machine intelligence and real-world applications.</p>
+    </div>
+    
     <div class="section">
         <h2>Projects</h2>
         <div class="projects-container">
@@ -148,3 +144,4 @@
     </div>
 </body>
 </html>
+
