@@ -5,11 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelby Dixon - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #fef8f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        header {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        a {
+            color: #ff758c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background: #ff758c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover {
+            background: #ff4e70;
+        }
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #fef8f8;
+        }
+        .dark-mode section {
+            background: #2a2a2a;
+            color: #fef8f8;
+        }
+        .dark-mode header {
+            background: linear-gradient(to right, #660033, #99004d);
+        }
+        .dark-mode a {
+            color: #ff99cc;
+        }
+        .toggle-container {
+            margin: 20px;
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
+    <div class="toggle-container">
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
     <header>
         <h1>Welcome to My Portfolio</h1>
         <p>I'm Shelby Dixon, a Computer Engineering student specializing in AI, Robotics, and Cybersecurity.</p>
+        <button onclick="window.location.href='#contact'">Get in Touch</button>
     </header>
 
     <section id="about">
@@ -30,6 +100,12 @@
         <h2>Contact</h2>
         <p>Email: <a href="mailto:sdixon4@hawaii.edu">sdixon4@hawaii.edu</a></p>
     </section>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
 
