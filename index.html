@@ -47,6 +47,30 @@
             font-size: 1.2em;
             margin: 10px 0;
         }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .profile-info {
+            flex: 1;
+            text-align: left;
+        }
+        .profile-image img {
+            width: 250px;
+            height: auto;
+            border-radius: 50%;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #ff99cc;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
         .projects-container {
             display: flex;
             flex-wrap: wrap;
@@ -71,6 +95,22 @@
     </style>
 </head>
 <body>
+    <div class="container profile-container">
+        <div class="profile-info">
+            <h1>Shelby Dixon</h1>
+            <p>Computer Engineering Student | AI | Robotics | Cybersecurity</p>
+            <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
+            <div class="social-icons">
+                <a href="https://github.com/sdixon4" target="_blank">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" target="_blank">🔗 LinkedIn</a>
+                <a href="mailto:sdixon4@hawaii.edu" target="_blank">📨 Email</a>
+            </div>
+        </div>
+        <div class="profile-image">
+            <img src="avatar.png" alt="Shelby Dixon Avatar">
+        </div>
+    </div>
+
     <div class="section">
         <h2>Projects</h2>
         <div class="projects-container">
