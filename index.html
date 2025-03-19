@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: #1a1a1a;
+            color: #fef8f8;
             margin: 0;
             padding: 0;
             transition: background 0.3s, color 0.3s;
@@ -21,7 +21,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: white;
+            background: #2a2a2a;
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             padding: 40px;
@@ -32,7 +32,7 @@
         }
         .profile-info h1 {
             font-size: 3em;
-            color: #ff5e8d;
+            color: #ff99cc;
             margin-bottom: 10px;
         }
         .profile-info p {
@@ -42,7 +42,7 @@
         .profile-info a {
             display: inline-block;
             margin-top: 15px;
-            background: #ff5e8d;
+            background: #ff99cc;
             color: white;
             padding: 12px 24px;
             border-radius: 30px;
@@ -59,53 +59,52 @@
             border-radius: 50%;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        .dark-mode {
-            background-color: #1a1a1a;
-            color: #fef8f8;
-        }
-        .dark-mode .container {
-            background: #2a2a2a;
-            color: #fef8f8;
-        }
-        .dark-mode h1 {
-            color: #ff99cc;
-        }
-        .dark-mode a {
-            background: #ff99cc;
-        }
-        .toggle-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
         .social-icons {
             display: flex;
             gap: 15px;
             margin-top: 15px;
         }
         .social-icons a {
-            color: #ff5e8d;
+            color: #ff99cc;
             font-size: 1.5em;
             transition: 0.3s;
+            text-decoration: none;
         }
         .social-icons a:hover {
             color: #e04b76;
         }
+        .section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #2a2a2a;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        h2 {
+            color: #ff99cc;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
-    <div class="toggle-container">
-        <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
-    </div>
     <div class="container">
         <div class="profile-info">
             <h1>Shelby Dixon</h1>
             <p>Computer Engineering Student | AI | Robotics | Cybersecurity</p>
             <p>Currently building AI-powered Raspberry Pi robots, exploring AI security, and FPGA programming.</p>
             <div class="social-icons">
-                <a href="#" target="_blank">🔗 LinkedIn</a>
-                <a href="#" target="_blank">🐙 GitHub</a>
-                <a href="#" target="_blank">📨 Email</a>
+                <a href="https://github.com/sdixon4" target="_blank">🐙 GitHub</a>
+                <a href="mailto:sdixon4@hawaii.edu" target="_blank">📨 Email</a>
             </div>
             <a href="#contact">Let's Connect</a>
         </div>
@@ -113,17 +112,27 @@
             <img src="avatar.png" alt="Shelby Dixon Avatar">
         </div>
     </div>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
-        }
-        window.onload = function () {
-            if (localStorage.getItem("darkMode") === "true") {
-                document.body.classList.add("dark-mode");
-            }
-        };
-    </script>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming:</strong> C, C++, Python, Verilog</li>
+            <li><strong>AI & ML:</strong> TensorFlow, PyTorch, Embedded AI</li>
+            <li><strong>Cybersecurity:</strong> AI Security, Network Security, Malware Analysis</li>
+            <li><strong>Hardware & Robotics:</strong> FPGA, Embedded Systems, ROS</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>AI-Powered Raspberry Pi Robot:</strong> Object detection & voice control with TensorFlow Lite.</li>
+            <li><strong>AI Malware Detector:</strong> Cybersecurity tool using ML for threat detection.</li>
+            <li><strong>FPGA AI Accelerator:</strong> Hardware-optimized AI inference with Verilog & TensorFlow.</li>
+            <li><strong>First Nations Launch High Power Rocketry:</strong> Currently working on high-power rocketry for 2025.</li>
+            <li><strong>RockSat-X:</strong> Working on NASA's RockSat-X project for 2025.</li>
+        </ul>
+    </div>
 </body>
 </html>
 
