@@ -7,24 +7,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Animated Intro Section -->
     <div class="holder">
-        <div class="dot dot1 top">
-            <svg viewBox="0 0 101 101">
-                <path fill="none" stroke="#FFFFFF" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10"
-                      d="M62.2,76.3H38.8c-1,0-1.9-0.8-1.9-1.9v-1.8c0-1,0.8-1.9,1.9-1.9h23.3c1,0,1.9,0.8,1.9,1.9v1.8
-                      C64,75.5,63.2,76.3,62.2,76.3z"/>
-            </svg>
-        </div>
+        <div class="dot dot1 top"></div>
+        <div class="dot dot2 mid"></div>
+        <div class="dot dot3 btm"></div>
         <ul class="titles">
             <li class="title1 title-animate">AI Engineer</li>
             <li class="title2 title-animate">Cybersecurity Enthusiast</li>
             <li class="title3 title-animate">Hardware Developer</li>
         </ul>
     </div>
-
     <a href="#" class="reset">Replay</a>
-    
+
+    <!-- Main Content -->
+    <section class="content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Shelby Dixon, a Computer Engineering student at UH Manoa.<br>
+        My work focuses on AI, cybersecurity, FPGA acceleration, and robotics.</p>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Originally an organic farmer, I transitioned into Computer Engineering, combining my hands-on experience with high-tech solutions.</p>
+            <img src="IMG_7188.remini-enhanced.jpg" alt="Shelby Dixon">
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="fnl.html">🚀 First Nations Launch (FNL)</a></li>
+                <li><a href="rocksat-x.html">🛰️ RockSat-X 2025</a></li>
+                <li>🤖 AI-powered Raspberry Pi Robot</li>
+                <li>🔒 AI-Powered Phishing Detector</li>
+            </ul>
+        </section>
+
+        <!-- Chatbot Section -->
+        <section class="chatbot-container">
+            <h2>Ask About My Experience</h2>
+            <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)">
+            <div class="chatbot-output" id="chatbot-output"></div>
+        </section>
+    </section>
+
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+
 </body>
 </html>
 

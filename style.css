@@ -7,50 +7,62 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    text-align: center;
 }
 
+/* Animated Titles */
 .holder {
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 10%;
+    transform: translate(-50%, -10%);
     text-align: center;
 }
 
 .titles {
     list-style: none;
     padding: 0;
-}
-
-.titles li {
     font-size: 2rem;
-    opacity: 0;
-    text-transform: uppercase;
-    transition: all 1s ease-in-out;
 }
 
-.dot {
-    background: #8599b0;
-    border-radius: 100px;
-    height: 100px;
-    width: 100px;
-    position: absolute;
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-a.reset {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #222;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
     color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
     text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Profile */
+#profile {
+    margin-top: 20px;
+}
+
+#profile img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Chatbot */
+#chatbot {
+    margin-top: 30px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
 }
 
