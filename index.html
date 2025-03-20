@@ -5,39 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelby Dixon - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="theme-toggle.js" defer></script>
-    <script src="chatbot.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Shelby Dixon</h1>
-        <p>Computer Engineering | AI | Robotics | Cybersecurity</p>
-        <nav>
-            <ul>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="fnl.html">First Nations Launch</a></li>
-                <li><a href="rocksat-x.html">RockSat-X</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.pdf" target="_blank">Resume</a></li>
-            </ul>
-        </nav>
-        <button id="theme-toggle">🌙</button>
-    </header>
+    <div class="holder">
+        <div class="dot dot1 top">
+            <svg viewBox="0 0 101 101">
+                <path fill="none" stroke="#FFFFFF" stroke-linecap="square" stroke-linejoin="round" stroke-miterlimit="10"
+                      d="M62.2,76.3H38.8c-1,0-1.9-0.8-1.9-1.9v-1.8c0-1,0.8-1.9,1.9-1.9h23.3c1,0,1.9,0.8,1.9,1.9v1.8
+                      C64,75.5,63.2,76.3,62.2,76.3z"/>
+            </svg>
+        </div>
+        <ul class="titles">
+            <li class="title1 title-animate">AI Engineer</li>
+            <li class="title2 title-animate">Cybersecurity Enthusiast</li>
+            <li class="title3 title-animate">Hardware Developer</li>
+        </ul>
+    </div>
 
-    <section class="intro">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Currently developing AI-powered Raspberry Pi robots, FPGA acceleration, and AI security applications.</p>
-    </section>
-
-    <section class="chatbot-container">
-        <h2>Ask About My Experience</h2>
-        <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)">
-        <div class="chatbot-output" id="chatbot-output"></div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Shelby Dixon</p>
-    </footer>
+    <a href="#" class="reset">Replay</a>
+    
+    <script src="script.js"></script>
 </body>
 </html>
 
