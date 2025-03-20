@@ -1,184 +1,79 @@
-
-/* ======= General Styles ======= */
-:root {
-    --primary-bg: #0D0D0D;
-    --secondary-bg: #1A1A1A;
-    --text-color: #EAEAEA;
-    --accent-color: #FFC857;
-    --link-hover: #FFD700;
-    --border-radius: 10px;
-}
-
-/* Light Mode */
-.light-mode {
-    --primary-bg: #F8F8F8;
-    --secondary-bg: #FFFFFF;
-    --text-color: #333333;
-    --accent-color: #1E90FF;
-    --link-hover: #007BFF;
-}
-
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--primary-bg);
-    color: var(--text-color);
+    background-color: #1E1E2F;
+    color: #EAEAEA;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
 }
 
-/* ======= Layout Grid ======= */
-.container {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
-    width: 90%;
-    max-width: 1200px;
-}
-
-/* ======= Left Panel (Sidebar) ======= */
-.left-panel {
-    background: var(--secondary-bg);
+header {
+    text-align: center;
     padding: 20px;
-    border-radius: var(--border-radius);
-    text-align: left;
+    background: #2C2C3E;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.name {
-    font-size: 2rem;
-    margin-bottom: 5px;
-    color: var(--accent-color);
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
-.title {
-    font-size: 1rem;
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-.nav-menu ul {
+nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
 }
 
-.nav-menu ul li {
-    margin: 10px 0;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-.nav-menu ul li a {
+nav a {
+    color: #5D9CEC;
     text-decoration: none;
-    color: var(--text-color);
-    font-size: 1rem;
-    transition: color 0.3s;
+    font-size: 1.1em;
 }
 
-.nav-menu ul li a:hover {
-    color: var(--link-hover);
+nav a:hover {
+    text-decoration: underline;
 }
 
-.contact-info {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
-
-/* ======= Right Panel (Main Content) ======= */
-.right-panel {
+.intro {
+    text-align: center;
     padding: 30px;
-    background: var(--secondary-bg);
-    border-radius: var(--border-radius);
 }
 
-/* ======= Projects Section ======= */
-#projects h2 {
-    font-size: 1.8rem;
-    color: var(--accent-color);
-}
-
-.project {
-    background: var(--primary-bg);
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: var(--border-radius);
-    transition: transform 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-3px);
-}
-
-.project h3 a {
-    text-decoration: none;
-    color: var(--accent-color);
-}
-
-.project p {
-    opacity: 0.8;
-}
-
-/* ======= Chatbot Section ======= */
-#chatbot {
-    margin-top: 40px;
-}
-
-#chatbot h2 {
-    color: var(--accent-color);
+.chatbot-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #2C2C3E;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 #chatbot-input {
-    width: 100%;
+    width: 80%;
     padding: 10px;
+    margin-top: 10px;
     border: none;
-    border-radius: var(--border-radius);
-    background: var(--primary-bg);
-    color: var(--text-color);
-    font-size: 1rem;
+    border-radius: 5px;
 }
 
 .chatbot-output {
-    background: var(--primary-bg);
+    background: #1E1E2F;
+    color: #EAEAEA;
     padding: 10px;
-    border-radius: var(--border-radius);
+    border-radius: 5px;
     margin-top: 10px;
-    font-size: 1rem;
 }
 
-/* ======= Theme Toggle Button ======= */
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--text-color);
-    transition: 0.4s;
-    border-radius: 20px;
-}
-
-input:checked + .slider {
-    background-color: var(--accent-color);
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #2C2C3E;
 }
 

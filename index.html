@@ -5,71 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelby Dixon - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="chatbot.js"></script>
-    <script defer src="theme-toggle.js"></script>
+    <script src="theme-toggle.js" defer></script>
+    <script src="chatbot.js" defer></script>
 </head>
 <body>
+    <header>
+        <h1>Shelby Dixon</h1>
+        <p>Computer Engineering | AI | Robotics | Cybersecurity</p>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="fnl.html">First Nations Launch</a></li>
+                <li><a href="rocksat-x.html">RockSat-X</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">🌙</button>
+    </header>
 
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle">
-        <label class="switch">
-            <input type="checkbox" id="toggle-theme">
-            <span class="slider"></span>
-        </label>
-    </div>
+    <section class="intro">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Currently developing AI-powered Raspberry Pi robots, FPGA acceleration, and AI security applications.</p>
+    </section>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Left Section (Navigation & Info) -->
-        <div class="left-panel">
-            <h1 class="name">Shelby Dixon</h1>
-            <p class="title">Computer Engineering | AI | Cybersecurity | Robotics</p>
+    <section class="chatbot-container">
+        <h2>Ask About My Experience</h2>
+        <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)">
+        <div class="chatbot-output" id="chatbot-output"></div>
+    </section>
 
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="resume.pdf" target="_blank">Resume</a></li>
-                </ul>
-            </nav>
-
-            <div class="contact-info">
-                <p>Email: <a href="mailto:sdixon4@hawaii.edu">sdixon4@hawaii.edu</a></p>
-                <p>GitHub: <a href="https://github.com/sdixon4" target="_blank">github.com/sdixon4</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" target="_blank">LinkedIn</a></p>
-            </div>
-        </div>
-
-        <!-- Right Section (Content) -->
-        <div class="right-panel">
-            <section id="projects">
-                <h2>Projects</h2>
-
-                <div class="project">
-                    <h3><a href="fnl.html">First Nations Launch (FNL) 2025</a></h3>
-                    <p>Simulations & Motor Lead for high-power rocketry competition.</p>
-                </div>
-
-                <div class="project">
-                    <h3><a href="rocksatx.html">RockSat-X 2025</a></h3>
-                    <p>Project Lead for Mobius Camera system for NASA’s sounding rocket program.</p>
-                </div>
-
-                <div class="project">
-                    <h3><a href="adrian.html">Adrian - AI Raspberry Pi Robot</a></h3>
-                    <p>Developing an AI-powered Raspberry Pi robot for object detection & voice commands.</p>
-                </div>
-            </section>
-
-            <section id="chatbot">
-                <h2>Ask About My Experience</h2>
-                <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects...">
-                <div class="chatbot-output" id="chatbot-output"></div>
-            </section>
-        </div>
-    </div>
-
+    <footer>
+        <p>&copy; 2025 Shelby Dixon</p>
+    </footer>
 </body>
 </html>
 
