@@ -1,61 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelby Dixon - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shelby Dixon - Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body class="bg-dark text-light">
 
-    <!-- Animated Intro Section -->
-    <div class="holder">
-        <div class="dot dot1 top"></div>
-        <div class="dot dot2 mid"></div>
-        <div class="dot dot3 btm"></div>
-        <ul class="titles">
-            <li class="title1 title-animate">AI Engineer</li>
-            <li class="title2 title-animate">Cybersecurity Enthusiast</li>
-            <li class="title3 title-animate">Hardware Developer</li>
-        </ul>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">Shelby Dixon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
-    <a href="#" class="reset">Replay</a>
+  </nav>
 
-    <!-- Main Content -->
-    <section class="content">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Shelby Dixon, a Computer Engineering student at UH Manoa.<br>
-        My work focuses on AI, cybersecurity, FPGA acceleration, and robotics.</p>
+  <!-- Hero Section -->
+  <header class="container text-center mt-5">
+    <h1 class="display-4">Hi, I'm Shelby Dixon</h1>
+    <p class="lead">Computer Engineering Student | AI | Cybersecurity | Robotics</p>
+  </header>
 
-        <!-- About Me Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Originally an organic farmer, I transitioned into Computer Engineering, combining my hands-on experience with high-tech solutions.</p>
-            <img src="IMG_7188.remini-enhanced.jpg" alt="Shelby Dixon">
-        </section>
+  <!-- Chatbot Section -->
+  <section class="container text-center mt-5">
+    <h3>Ask About My Experience</h3>
+    <input type="text" id="chatbot-input" class="form-control mb-2" placeholder="Ask me something..." onkeypress="handleKeyPress(event)">
+    <div id="chatbot-output" class="border rounded p-3 bg-secondary text-light"></div>
+  </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="fnl.html">🚀 First Nations Launch (FNL)</a></li>
-                <li><a href="rocksat-x.html">🛰️ RockSat-X 2025</a></li>
-                <li>🤖 AI-powered Raspberry Pi Robot</li>
-                <li>🔒 AI-Powered Phishing Detector</li>
-            </ul>
-        </section>
+  <!-- Footer -->
+  <footer class="text-center mt-5 p-3 bg-primary text-white">
+    &copy; 2025 Shelby Dixon | <a href="mailto:sdixon4@hawaii.edu" class="text-white">sdixon4@hawaii.edu</a>
+  </footer>
 
-        <!-- Chatbot Section -->
-        <section class="chatbot-container">
-            <h2>Ask About My Experience</h2>
-            <input type="text" id="chatbot-input" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)">
-            <div class="chatbot-output" id="chatbot-output"></div>
-        </section>
-    </section>
-
-    <script src="script.js"></script>
-    <script src="chatbot.js"></script>
-
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
 

@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>About Me - Shelby Dixon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fnl.html">First Nations Launch</a></li>
-                <li><a href="rocksat-x.html">RockSat-X</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="fnl.html">FNL</a></li>
+        <li><a href="rocksat-x.html">RockSat-X</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="about">
-        <img src="IMG_7188.remini-enhanced.jpg" alt="Shelby Dixon">
-        <h2>Hi, I'm Shelby Dixon!</h2>
-        <p>I'm a former **organic farmer turned computer engineer**, passionate about AI, robotics, and space research. I have hands-on experience in FPGA acceleration, AI-powered robotics, and cybersecurity.</p>
-        <p>Beyond tech, I enjoy **rocketry simulations, traveling, and spending time with my dog.**</p>
-    </section>
+  <main class="container about-page">
+    <h1>About Me</h1>
 
-    <footer>
-        <p>&copy; 2025 Shelby Dixon</p>
-    </footer>
+    <!-- Profile Picture -->
+    <div class="profile-pic">
+      <img src="images/profile.jpg" alt="Shelby Dixon smiling" />
+    </div>
+
+    <p>
+      Hi! I'm <strong>Shelby Dixon</strong> — a former organic farmer who found a love for engineering. I’m now a Computer Engineering student at <strong>UH Manoa</strong>, exploring the intersections of <strong>AI</strong>, <strong>cybersecurity</strong>, and <strong>hardware development</strong>.
+    </p>
+
+    <p>
+      Before diving into tech, I spent years working on regenerative farms in Hawaii and Northern California. That hands-on experience taught me patience, grit, and the beauty of solving real-world problems — values I bring into every engineering project.
+    </p>
+
+    <p>
+      When I'm not programming, you’ll find me baking sourdough bread, planning my next travel adventure, or spending time with my dog (who definitely deserves their own spotlight 🐶).
+    </p>
+
+    <hr>
+
+    <h2>Life Outside Engineering</h2>
+    <p>Here's a photo of me and my best bud enjoying time in nature:</p>
+
+    <!-- Dog Picture -->
+    <div class="dog-photo">
+      <img src="images/dog.jpg" alt="Shelby with her dog in a field" />
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Shelby Dixon</p>
+  </footer>
 </body>
 </html>
 
