@@ -4,47 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shelby Dixon | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RPfD0cXJ7a4U26bM2eHL+0W1yIoZgCkzv1Cswb7p1Fa1R"
+    crossorigin="anonymous"
+  />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+<body class="dark-mode">
+
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="#">Shelby Dixon</a>
-    <div class="collapse navbar-collapse">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
         <li class="nav-item"><a class="nav-link" href="fnl.html">FNL Project</a></li>
         <li class="nav-item"><a class="nav-link" href="rocksat-x.html">RockSat-X</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/shelby-dixon-531096308/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-sm btn-outline-light ml-2" id="theme-toggle">Toggle Theme</button>
+        </li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="text-center mt-5 mb-5">
-    <h1>Hello, I’m Shelby!</h1>
-    <p>Computer Engineering Student | AI, Robotics, Cybersecurity, FPGA</p>
-    <p>Organic farmer turned engineer. Baking, traveling & building things!</p>
+  <header class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4">Hi, I'm Shelby Dixon</h1>
+      <p class="lead">AI & Robotics Enthusiast | Cybersecurity Researcher | Hardware Developer</p>
+      <p>Computer Engineering Student at UH Mānoa</p>
+    </div>
   </header>
 
-  <!-- Chatbot -->
-  <section class="container chatbot-container my-5">
-    <h2 class="text-center">Ask About My Experience</h2>
-    <input type="text" id="chatbot-input" class="form-control my-3" placeholder="Ask me about my skills or projects..." onkeypress="handleKeyPress(event)" />
-    <div id="chatbot-output" class="p-3 border rounded bg-secondary text-white"></div>
+  <!-- Skills Section -->
+  <section class="container py-5 text-center">
+    <h2 class="mb-4">Skills</h2>
+    <div class="row">
+      <div class="col-md-3">C</div>
+      <div class="col-md-3">C++</div>
+      <div class="col-md-3">Python</div>
+      <div class="col-md-3">Git</div>
+      <div class="col-md-3">Arduino</div>
+      <div class="col-md-3">RockSim</div>
+      <div class="col-md-3">CAD</div>
+      <div class="col-md-3">Aladdin Software</div>
+      <div class="col-md-3">LTSpice</div>
+    </div>
+  </section>
+
+  <!-- Projects Preview -->
+  <section class="container py-5">
+    <h2 class="text-center mb-4">Projects</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4 text-center">
+        <a href="fnl.html" class="btn btn-outline-primary btn-lg btn-block">First Nations Launch</a>
+      </div>
+      <div class="col-md-6 mb-4 text-center">
+        <a href="rocksat-x.html" class="btn btn-outline-primary btn-lg btn-block">RockSat-X Mission</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot Section -->
+  <section class="container chatbot-container py-5">
+    <h2 class="text-center mb-4">Ask About My Experience</h2>
+    <div class="form-group">
+      <input
+        type="text"
+        id="chat-input"
+        class="form-control"
+        placeholder="Ask me about my skills or projects..."
+      />
+    </div>
+    <div id="chat-response" class="border p-3 bg-light rounded"></div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center mt-5 mb-4 text-muted">
-    <small>© 2025 Shelby Dixon</small>
+  <footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 Shelby Dixon | <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" class="text-white" target="_blank">LinkedIn</a></p>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="main.js"></script>
-  <script src="chatbot.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
+  <script src="assets/js/chatbot.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
 
