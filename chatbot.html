@@ -1,0 +1,43 @@
+<div class="chatbot-container fixed-bottom mb-4 mr-4 p-3 shadow rounded bg-light" style="max-width: 400px; margin-left: auto; margin-right: 1rem;">
+  <h5 class="text-dark mb-2">🤖 Ask Me Anything!</h5>
+  <input
+    type="text"
+    id="chat-input"
+    class="form-control mb-2"
+    placeholder="e.g. What’s your experience with AI?"
+  />
+  <div id="chat-response" class="bg-white p-2 rounded border"></div>
+</div>
+
+<script>
+  const responses = {
+    skills: "I specialize in C/C++, Python, JavaScript, AI/ML with PyTorch & TensorFlow, and embedded systems like Arduino & Raspberry Pi.",
+    ai: "I’ve worked on AI-powered phishing detectors and anomaly detection systems using NLP and machine learning.",
+    fpga: "I'm building an FPGA-based AI voice assistant using Vivado and Verilog on Ubuntu.",
+    projects: "My major projects include RockSat-X (NASA), First Nations Launch, and an AI phishing detection web app.",
+    cybersecurity: "I’ve used tools like Wireshark, Nmap, and Snort for network security and intrusion detection research.",
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("chat-input");
+    const responseDiv = document.getElementById("chat-response");
+
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        const query = input.value.toLowerCase();
+        input.value = "";
+
+        let reply = "I'm still learning — ask me about my skills, projects, AI, or cybersecurity!";
+        for (const key in responses) {
+          if (query.includes(key)) {
+            reply = responses[key];
+            break;
+          }
+        }
+
+        responseDiv.innerHTML = `<p><strong>You:</strong> ${query}</p><p><strong>ShelbyBot:</strong> ${reply}</p>`;
+      }
+    });
+  });
+</script>
+

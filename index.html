@@ -3,125 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<h1 class="display-4 text-center text-light" style="text-shadow: 0 0 8px rgba(255,255,255,0.2);">
-  Hi, I'm Shelby Dixon
-</h1>
   <title>Shelby Dixon | Portfolio</title>
 
-  <!-- Bootstrap CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RPfD0cXJ7a4U26bM2eHL+0W1yIoZgCkzv1Cswb7p1Fa1R"
-    crossorigin="anonymous"
-  />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
+  <!-- Bootstrap & Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css" />
-</head>
-<body class="dark-mode">
 
-  <!-- Navigation -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .dark-mode {
+      background-color: #111;
+      color: #fff;
+    }
+    a {
+      color: #6ec1e4;
+    }
+    h2 {
+      font-weight: 700;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background-color: #1c1c1c;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .project-card h4 {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="#">Shelby Dixon</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <a class="navbar-brand font-weight-bold" href="index.html">Shelby Dixon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
-        <li class="nav-item"><a class="nav-link" href="fnl.html">FNL Project</a></li>
-        <li class="nav-item"><a class="nav-link" href="rocksat-x.html">RockSat-X</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.linkedin.com/in/shelby-dixon-531096308/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-        </li>
-        <li class="nav-item">
-          <button class="btn btn-sm btn-outline-light ml-2" id="theme-toggle">Toggle Theme</button>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero-section text-center">
-    <div class="container">
-      <h1 class="display-4">Hi, I'm Shelby Dixon</h1>
-      <p class="lead">AI & Robotics Enthusiast | Cybersecurity Researcher | Hardware Developer</p>
-      <p>Computer Engineering Student at UH Mānoa</p>
-    </div>
+  <!-- HEADER -->
+  <header class="container py-5">
+    <h1 class="display-4">Hi, I'm Shelby Dixon</h1>
+    <p class="lead">AI & Robotics Enthusiast | Cybersecurity Researcher | Hardware Developer</p>
+    <p>Computer Engineering Student at UH Mānoa</p>
   </header>
 
-  <!-- Skills Section -->
-  <section class="container py-5 text-center">
-    <h2 class="mb-4">Skills</h2>
-    <div class="row">
+  <!-- SKILLS -->
+  <section class="container py-5">
+    <h2 class="text-center">Skills</h2>
+
+    <h4>Programming & Scripting</h4>
+    <div class="row mb-3">
       <div class="col-md-3">C</div>
       <div class="col-md-3">C++</div>
       <div class="col-md-3">Python</div>
-      <div class="col-md-3">Git</div>
+      <div class="col-md-3">JavaScript</div>
+      <div class="col-md-3">Bash/Shell</div>
+    </div>
+
+    <h4>AI/ML Tools</h4>
+    <div class="row mb-3">
+      <div class="col-md-3">PyTorch</div>
+      <div class="col-md-3">TensorFlow</div>
+      <div class="col-md-3">Hugging Face</div>
+    </div>
+
+    <h4>Cybersecurity</h4>
+    <div class="row mb-3">
+      <div class="col-md-3">Wireshark</div>
+      <div class="col-md-3">Nmap</div>
+      <div class="col-md-3">Snort</div>
+    </div>
+
+    <h4>Hardware/Embedded</h4>
+    <div class="row mb-3">
       <div class="col-md-3">Arduino</div>
+      <div class="col-md-3">Raspberry Pi</div>
+      <div class="col-md-3">Verilog</div>
+      <div class="col-md-3">Vivado</div>
+    </div>
+
+    <h4>Simulation & Design</h4>
+    <div class="row mb-3">
       <div class="col-md-3">RockSim</div>
       <div class="col-md-3">CAD</div>
-      <div class="col-md-3">Aladdin Software</div>
       <div class="col-md-3">LTSpice</div>
+      <div class="col-md-3">Aladdin Software</div>
+    </div>
+
+    <h4>Version Control & DevOps</h4>
+    <div class="row mb-3">
+      <div class="col-md-3">Git</div>
+      <div class="col-md-3">GitHub</div>
+      <div class="col-md-3">Docker</div>
+    </div>
+
+    <h4>Tools & Platforms</h4>
+    <div class="row mb-3">
+      <div class="col-md-3">Linux/Ubuntu</div>
+      <div class="col-md-3">VS Code</div>
+      <div class="col-md-3">UTM / QEMU</div>
     </div>
   </section>
 
-  <!-- Projects Preview -->
+  <!-- PROJECTS -->
   <section class="container py-5">
     <h2 class="text-center mb-4">Projects</h2>
-<div class="row justify-content-center">
-  <div class="col-md-4 mb-4">
-    <a href="fnl.html" class="btn btn-outline-light btn-lg btn-block shadow-sm rounded-pill">
-      First Nations Launch
-    </a>
-  </div>
-  <div class="col-md-4 mb-4">
-    <a href="rocksat-x.html" class="btn btn-outline-light btn-lg btn-block shadow-sm rounded-pill">
-      RockSat-X Mission
-    </a>
-  </div>
-  <div class="col-md-4 mb-4">
-    <a href="https://github.com/sdixon4/phishing-detector" target="_blank"
-       class="btn btn-outline-light btn-lg btn-block shadow-sm rounded-pill">
-      AI Phishing Detector
-    </a>
-  </div>
-</div>
-  </section>
-
-  <!-- Chatbot Section -->
-  <section class="container chatbot-container py-5">
-    <h2 class="text-center mb-4">Ask About My Experience</h2>
-    <div class="form-group">
-      <input
-        type="text"
-        id="chat-input"
-        class="form-control"
-        placeholder="Ask me about my skills or projects..."
-      />
+    <div class="project-card">
+      <h4>🚀 RockSat-X 2025</h4>
+      <p>NASA Sounding Rocket Experiment | <strong>Mobius Camera Systems Lead</strong></p>
+      <p>Led development for onboard camera integration, flight imagery systems, and vacuum testing under NASA’s RockSat-X program.</p>
     </div>
-    <div id="chat-response" class="border p-3 bg-light rounded"></div>
+
+    <div class="project-card">
+      <h4>🚀 First Nations Launch 2025</h4>
+      <p>High-Powered Rocketry Team | <strong>Simulations & Motor Lead</strong></p>
+      <p>Led simulation modeling and motor propulsion selection for First Nations Launch national competition.</p>
+    </div>
+
+    <div class="project-card">
+      <h4>🛡️ AI-Powered Phishing Detector</h4>
+      <p>Developed a Flask-based web app that uses DistilBERT to detect phishing messages in real time.</p>
+      <p><a href="https://github.com/sdixon4/phishing-detector" target="_blank">View on GitHub</a></p>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <!-- CHATBOT -->
+  <div id="chatbot-placeholder"></div>
+
+  <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-4">
     <p>&copy; 2025 Shelby Dixon | <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" class="text-white" target="_blank">LinkedIn</a></p>
   </footer>
@@ -133,6 +157,13 @@
   <script src="assets/js/theme-toggle.js"></script>
   <script src="assets/js/chatbot.js"></script>
   <script src="assets/js/script.js"></script>
+  <script>
+    fetch('chatbot.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('chatbot-placeholder').innerHTML = html;
+      });
+  </script>
 </body>
 </html>
 
