@@ -2,39 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects – Shelby Dixon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Shelby Dixon</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body.dark-mode {
-      background-color: #111;
-      color: #f5f5f5;
-    }
-
-    .card {
-      background-color: #222;
-      color: #fff;
-      border: none;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-    }
-
-    .card-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .card-text {
-      font-size: 0.95rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="dark-mode">
   <!-- Navbar -->
@@ -53,49 +24,51 @@
     </div>
   </nav>
 
-  <!-- Projects Section -->
   <main class="container py-5">
-    <h2 class="text-center mb-5">Explore some of the exciting work I’ve been involved in.</h2>
+    <h1 class="text-center mb-4">Explore some of the exciting work I've been involved in.</h1>
     <div class="row">
+      <!-- RockSat-X Project -->
       <div class="col-md-6 mb-4">
-        <div class="card h-100">
+        <div class="card project-card h-100">
           <div class="card-body">
-            <h5 class="card-title">🚀 RockSat-X 2025</h5>
+            <h4 class="card-title">🚀 RockSat-X 2025</h4>
             <p class="card-text">
-              NASA Sounding Rocket Experiment — Mobius Camera Systems Lead.
-              Led onboard camera integration and testing for rocket imagery and vacuum performance.
+              NASA Sounding Rocket Experiment — Mobius Camera Systems Lead. Led onboard camera integration and testing for rocket imagery and vacuum performance.
             </p>
+            <a href="docs/RockSatX_ISTR_Presentation.pdf" target="_blank" class="btn btn-outline-light btn-sm">📄 View ISTR PDF</a>
           </div>
         </div>
       </div>
 
+      <!-- FNL Project -->
       <div class="col-md-6 mb-4">
-        <div class="card h-100">
+        <div class="card project-card h-100">
           <div class="card-body">
-            <h5 class="card-title">🚀 First Nations Launch 2025</h5>
+            <h4 class="card-title">🚀 First Nations Launch 2025</h4>
             <p class="card-text">
-              High-Powered Rocketry Team — Simulations & Motor Lead.
-              Modeled rocket trajectory and selected optimal propulsion using RockSim and OpenRocket.
+              High-Powered Rocketry Team — Simulations & Motor Lead. Modeled rocket trajectory and selected optimal propulsion using RockSim and OpenRocket.
             </p>
+            <a href="docs/FNL_25_FRR_Report.pdf" target="_blank" class="btn btn-outline-light btn-sm">📄 View FRR PDF</a>
           </div>
         </div>
       </div>
 
+      <!-- Phishing Detector -->
       <div class="col-md-6 mb-4">
-        <div class="card h-100">
+        <div class="card project-card h-100">
           <div class="card-body">
-            <h5 class="card-title">🔐 Phishing Detection Tool</h5>
+            <h4 class="card-title">🔐 Phishing Detection Tool</h4>
             <p class="card-text">
-              AI-powered Flask web app that uses NLP to classify emails as phishing or safe.
-              Integrated Hugging Face Transformers with interactive API testing.
+              AI-powered Flask web app that uses NLP to classify emails as phishing or safe. Integrated Hugging Face Transformers with interactive API testing.
             </p>
+            <a href="https://github.com/sdixon4/phishing-detector" target="_blank" class="btn btn-outline-light btn-sm">🌐 GitHub Repo</a>
           </div>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Chatbot Toggle Button -->
+  <!-- Toggle Chatbot Button -->
   <div id="chatbot-toggle-container" class="text-center mb-5">
     <button onclick="toggleChatbot()" class="btn btn-primary btn-lg">
       🤖 Toggle Chatbot
