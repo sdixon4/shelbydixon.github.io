@@ -1,82 +1,85 @@
-<div id="chatbot-box" class="chatbot-box closed shadow rounded bg-light">
-  <div class="chatbot-header bg-primary text-white d-flex justify-content-between align-items-center px-3 py-2">
-    <div><strong>🤖 ShelbyBot</strong></div>
-    <button class="btn btn-sm btn-light" onclick="toggleChatbot()">−</button>
+<div id="chatbot-container" class="chatbot-container shadow rounded bg-light p-3" style="max-width: 400px;">
+  <div class="chat-header d-flex align-items-center mb-2">
+    <img src="images/avatar-shelbybot.png" alt="ShelbyBot Avatar" class="avatar me-2" />
+    <h5 class="mb-0">🤖 ShelbyBot</h5>
   </div>
 
-  <div id="chatbot-output" class="chatbot-body p-3"></div>
-
-  <div class="chatbot-input-box p-2 border-top">
-    <input
-      type="text"
-      id="chatbot-input"
-      class="form-control"
-      placeholder="Ask me anything about my projects, AI, or cybersecurity..."
-    />
+  <div id="chatbot-output" class="chat-output border rounded bg-white p-2 mb-2" style="height: 250px; overflow-y: auto;">
+    <!-- Messages will appear here -->
   </div>
+
+  <input
+    type="text"
+    id="chatbot-input"
+    class="form-control"
+    placeholder="Ask me anything about AI, projects, cybersecurity..."
+  />
 </div>
 
+<!-- Toggle Button -->
+<button id="chatbot-toggle" class="btn btn-primary position-fixed" style="bottom: 1rem; right: 1rem; z-index: 9999;">
+  🤖 Toggle Chatbot
+</button>
+
+<!-- Chatbot Styles -->
 <style>
-  .chatbot-box {
+  .chatbot-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 320px;
-    max-height: 500px;
+    bottom: 5rem;
+    right: 1rem;
+    z-index: 9998;
+    display: none;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+  }
+
+  .chat-header .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .chat-message {
     display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease;
-    z-index: 9999;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
   }
 
-  .chatbot-box.closed {
-    transform: translateY(110%);
+  .chat-message.shelbybot {
+    flex-direction: row;
   }
 
-  .chatbot-box.open {
-    transform: translateY(0%);
+  .chat-bubble {
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    max-width: 80%;
   }
 
-  .chatbot-body {
-    flex: 1;
-    overflow-y: auto;
-    background: #f9f9f9;
-  }
-
-  .chatbot-input-box {
-    background: #fff;
-  }
-
-  .bubble {
-    padding: 8px 12px;
-    margin: 6px 0;
-    border-radius: 20px;
-    max-width: 90%;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    word-wrap: break-word;
-  }
-
-  .user-bubble {
-    background-color: #007bff;
-    color: white;
+  .chat-bubble.user {
+    background-color: #d1e7dd;
     align-self: flex-end;
-    text-align: right;
     margin-left: auto;
   }
 
-  .bot-bubble {
-    background-color: #e6e6e6;
-    color: #333;
-    display: flex;
-    align-items: center;
+  .chat-bubble.shelbybot {
+    background-color: #e2e3e5;
+    margin-right: auto;
   }
 
-  .bot-avatar {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    margin-right: 8px;
+  .typing {
+    font-style: italic;
+    opacity: 0.7;
   }
 </style>
+
+<!-- Chatbot Script -->
+<script src="assets/js/chatbot.js"></script>
+<script>
+  // Toggle Chatbot visibility
+  document.getElementById('chatbot-toggle').addEventListener('click', () => {
+    const chatbot = document.getElementById('chatbot-container');
+    chatbot.style.display = chatbot.style.display === 'none' ? 'block' : 'none';
+  });
+</script>
 
