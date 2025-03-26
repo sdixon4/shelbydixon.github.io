@@ -115,21 +115,26 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/chatbot.js"></script>
-  <script>
-    // Load chatbot.html dynamically
-    function toggleChatbot() {
-      const container = document.getElementById("chatbot-container");
-      if (container.innerHTML.trim() === "") {
-        fetch("chatbot.html")
-          .then(res => res.text())
-          .then(html => container.innerHTML = html);
-      } else {
-        container.innerHTML = "";
-      }
+<script>
+  let chatbotVisible = false;
+
+  function toggleChatbot() {
+    const container = document.getElementById("chatbot-container");
+
+    if (!chatbotVisible) {
+      fetch("chatbot.html")
+        .then(res => res.text())
+        .then(html => {
+          container.innerHTML = html;
+          chatbotVisible = true;
+        });
+    } else {
+      container.innerHTML = "";
+      chatbotVisible = false;
     }
-  </script>
+  }
+</script>
+
+<script src="assets/js/chatbot.js"></script>
 </body>
 </html>
