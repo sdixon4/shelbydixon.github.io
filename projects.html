@@ -1,46 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Shelby Dixon</title>
-
-  <!-- Styles & Fonts -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-    .dark-mode {
-      background-color: #111;
-      color: #fff;
-    }
-    a {
-      color: #6ec1e4;
-    }
-    .project-card {
-      background-color: #1c1c1c;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
-    .project-card h4 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    .project-card p {
-      margin-bottom: 0.4rem;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="dark-mode">
-  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <a class="navbar-brand font-weight-bold" href="index.html">Shelby Dixon</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -49,56 +18,75 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item active"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- PROJECTS SECTION -->
+  <header class="container py-5 text-center">
+    <h1 class="display-4">Projects</h1>
+    <p class="lead">Explore some of the exciting work I've been involved in.</p>
+  </header>
+
   <section class="container py-5">
-    <h2 class="text-center mb-4">Projects</h2>
-
-    <div class="project-card">
-      <h4>🚀 RockSat-X 2025</h4>
-      <p><strong>Role:</strong> Mobius Camera Systems Lead</p>
-      <p><strong>Summary:</strong> NASA Sounding Rocket Experiment focusing on high-altitude onboard camera integration, flight video capture, and vacuum testing for reliability in near-space conditions.</p>
-    </div>
-
-    <div class="project-card">
-      <h4>🚀 First Nations Launch 2025</h4>
-      <p><strong>Role:</strong> Simulations & Motor Lead</p>
-      <p><strong>Summary:</strong> Led design and performance modeling for motor propulsion systems. Created high-fidelity simulations to optimize launch success and collaborated with team leads on motor test firing and integration.</p>
-    </div>
-
-    <div class="project-card">
-      <h4>🛡️ AI-Powered Phishing Detector</h4>
-      <p><strong>Tech Stack:</strong> Python, Flask, HuggingFace Transformers, DistilBERT</p>
-      <p><strong>Summary:</strong> Built a web app that flags phishing attempts in real-time using NLP. Designed to run locally or on a VM for lightweight inference.</p>
-      <p><a href="https://github.com/sdixon4/phishing-detector" target="_blank">View on GitHub</a></p>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">🚀 RockSat-X 2025</h5>
+            <p class="card-text">NASA Sounding Rocket Experiment — Mobius Camera Systems Lead. Led onboard camera integration and testing for rocket imagery and vacuum performance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">🚀 First Nations Launch 2025</h5>
+            <p class="card-text">High-Powered Rocketry Team — Simulations & Motor Lead. Modeled rocket trajectory and selected optimal propulsion using RockSim and OpenRocket.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">🔐 Phishing Detection Tool</h5>
+            <p class="card-text">AI-powered Flask web app that uses NLP to classify emails as phishing or safe. Integrated Hugging Face Transformers with interactive API testing.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Chatbot Injected -->
-  <div id="chatbot-placeholder"></div>
+  <div class="text-center mb-4">
+    <button class="btn btn-primary" onclick="toggleChatbot()">🤖 Toggle Chatbot</button>
+  </div>
+  <div id="chatbot-placeholder" style="display: none;"></div>
 
-  <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-4">
     <p>&copy; 2025 Shelby Dixon | <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" class="text-white" target="_blank">LinkedIn</a></p>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/theme-toggle.js"></script>
   <script src="assets/js/chatbot.js"></script>
+  <script src="assets/js/script.js"></script>
   <script>
-    fetch('chatbot.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('chatbot-placeholder').innerHTML = html;
-      });
+    function toggleChatbot() {
+      const el = document.getElementById('chatbot-placeholder');
+      if (el.style.display === 'none') {
+        fetch('chatbot.html')
+          .then(response => response.text())
+          .then(html => {
+            el.innerHTML = html;
+            el.style.display = 'block';
+          });
+      } else {
+        el.style.display = 'none';
+      }
+    }
   </script>
 </body>
 </html>

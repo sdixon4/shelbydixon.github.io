@@ -1,43 +1,82 @@
-<div class="chatbot-container fixed-bottom mb-4 mr-4 p-3 shadow rounded bg-light" style="max-width: 400px; margin-left: auto; margin-right: 1rem;">
-  <h5 class="text-dark mb-2">🤖 Ask Me Anything!</h5>
-  <input
-    type="text"
-    id="chat-input"
-    class="form-control mb-2"
-    placeholder="e.g. What’s your experience with AI?"
-  />
-  <div id="chat-response" class="bg-white p-2 rounded border"></div>
+<div id="chatbot-box" class="chatbot-box closed shadow rounded bg-light">
+  <div class="chatbot-header bg-primary text-white d-flex justify-content-between align-items-center px-3 py-2">
+    <div><strong>🤖 ShelbyBot</strong></div>
+    <button class="btn btn-sm btn-light" onclick="toggleChatbot()">−</button>
+  </div>
+
+  <div id="chatbot-output" class="chatbot-body p-3"></div>
+
+  <div class="chatbot-input-box p-2 border-top">
+    <input
+      type="text"
+      id="chatbot-input"
+      class="form-control"
+      placeholder="Ask me anything about my projects, AI, or cybersecurity..."
+    />
+  </div>
 </div>
 
-<script>
-  const responses = {
-    skills: "I specialize in C/C++, Python, JavaScript, AI/ML with PyTorch & TensorFlow, and embedded systems like Arduino & Raspberry Pi.",
-    ai: "I’ve worked on AI-powered phishing detectors and anomaly detection systems using NLP and machine learning.",
-    fpga: "I'm building an FPGA-based AI voice assistant using Vivado and Verilog on Ubuntu.",
-    projects: "My major projects include RockSat-X (NASA), First Nations Launch, and an AI phishing detection web app.",
-    cybersecurity: "I’ve used tools like Wireshark, Nmap, and Snort for network security and intrusion detection research.",
-  };
+<style>
+  .chatbot-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    z-index: 9999;
+  }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const input = document.getElementById("chat-input");
-    const responseDiv = document.getElementById("chat-response");
+  .chatbot-box.closed {
+    transform: translateY(110%);
+  }
 
-    input.addEventListener("keypress", function (e) {
-      if (e.key === "Enter") {
-        const query = input.value.toLowerCase();
-        input.value = "";
+  .chatbot-box.open {
+    transform: translateY(0%);
+  }
 
-        let reply = "I'm still learning — ask me about my skills, projects, AI, or cybersecurity!";
-        for (const key in responses) {
-          if (query.includes(key)) {
-            reply = responses[key];
-            break;
-          }
-        }
+  .chatbot-body {
+    flex: 1;
+    overflow-y: auto;
+    background: #f9f9f9;
+  }
 
-        responseDiv.innerHTML = `<p><strong>You:</strong> ${query}</p><p><strong>ShelbyBot:</strong> ${reply}</p>`;
-      }
-    });
-  });
-</script>
+  .chatbot-input-box {
+    background: #fff;
+  }
+
+  .bubble {
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 20px;
+    max-width: 90%;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  .user-bubble {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .bot-bubble {
+    background-color: #e6e6e6;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+
+  .bot-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+</style>
 
