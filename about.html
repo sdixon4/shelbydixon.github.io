@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me – Shelby Dixon</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>About Me - Shelby Dixon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode">
+<body class="bg-dark text-white">
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="#">Shelby Dixon</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <a class="navbar-brand" href="index.html">Shelby Dixon</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -21,56 +20,31 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- About Section -->
-  <main class="container py-5">
-    <h1 class="mb-4 text-center">About Me</h1>
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center mb-4">
-        <img src="images/profile.jpg" alt="Shelby Dixon Profile Picture" class="img-fluid rounded mb-3" style="max-height: 300px;">
-        <img src="images/dog.jpg" alt="Shelby with Dog" class="img-fluid rounded" style="max-height: 300px;">
-      </div>
-      <div class="col-md-6">
-        <h2>Hello!</h2>
-        <p>I'm Shelby Dixon – a former organic farmer turned Computer Engineering student at UH Manoa. I specialize in AI, robotics, cybersecurity, and hardware acceleration. Currently, I’m building AI & FPGA tools with a focus on digital design and ML models.</p>
-        <p>Before engineering, I worked on organic farms in Hawai‘i and Northern California, experiences that taught me problem-solving, patience, and sustainability. Today, I bring those values into my engineering projects.</p>
-        <p>Outside of tech, I enjoy traveling to new places, baking, and spending time with my dog. I also work as a physics lab assistant on campus and love helping others learn hands-on science and engineering.</p>
-      </div>
-    </div>
-  </main>
-
-  <!-- Chatbot Toggle Button -->
-  <div id="chatbot-toggle-container" class="text-center mb-5">
-    <button onclick="toggleChatbot()" class="btn btn-primary btn-lg">
-      🤖 Toggle Chatbot
-    </button>
+  <!-- Main Content -->
+  <div class="container text-center mt-5">
+    <h1 class="mb-4">About Me</h1>
+    <img src="images/farm.jpg" alt="Shelby on the farm" class="img-fluid rounded mb-4" style="max-height: 300px;">
+    <p class="lead">Hi, I'm Shelby Dixon — a passionate engineer with interests in AI, cybersecurity, robotics, and hardware acceleration. I blend my love for technology with a deep appreciation for nature, often working on meaningful projects that reflect both.</p>
+    <p>I’m currently building a smart pedometer app, designing AI-enhanced phishing and intrusion detection tools, and programming Adrian — my Raspberry Pi robot. When I’m not at the keyboard, you’ll find me farming or running with my dog along the Hawaiian coastline.</p>
   </div>
-  <div id="chatbot-container"></div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2025 Shelby Dixon | <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" class="text-white" target="_blank">LinkedIn</a></p>
+  <footer class="bg-secondary text-white text-center py-4 mt-5">
+    <p>&copy; 2025 Shelby Dixon | 
+      <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" class="text-white" target="_blank">LinkedIn</a>
+    </p>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/chatbot.js"></script>
-  <script>
-    function toggleChatbot() {
-      const container = document.getElementById("chatbot-container");
-      if (container.innerHTML.trim() === "") {
-        fetch("chatbot.html")
-          .then(res => res.text())
-          .then(html => container.innerHTML = html);
-      } else {
-        container.innerHTML = "";
-      }
-    }
-  </script>
 </body>
 </html>
+
