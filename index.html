@@ -3,73 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome | Shelby Dixon</title>
+  <title>Welcome</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
-      margin: 0;
-      height: 100vh;
-      background: radial-gradient(circle at center, #d1f3ff, #a0d8ef);
+      background-color: #111;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Helvetica Neue', sans-serif;
-      overflow: hidden;
-    }
-    .spinner {
-      border: 5px solid #e0f7ff;
-      border-top: 5px solid #007BFF;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .container {
-      display: none;
+      height: 100vh;
       flex-direction: column;
-      align-items: center;
-      animation: fadeIn 1s ease forwards;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .enter-btn {
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
-      margin-top: 1rem;
-      border: none;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-    .enter-btn:hover {
-      background-color: #0056b3;
-      transform: translateY(-2px);
+    .spinner-border {
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <div id="loader" class="spinner"></div>
-
-  <div id="main" class="container">
-    <a href="https://sdixon4.github.io/interactive-tech-tapestry/" target="_blank">
-      <button class="enter-btn">✨ Enter Here ✨</button>
-    </a>
+  <div class="spinner-border text-info" role="status">
+    <span class="sr-only">Loading...</span>
   </div>
-
-  <script>
-    setTimeout(() => {
-      document.getElementById('loader').style.display = 'none';
-      document.getElementById('main').style.display = 'flex';
-    }, 1500); // spinner duration in ms
-  </script>
+  <h2 class="mb-4">Getting things ready...</h2>
+  <a href="https://interactive-tech-tapestry.lovable.app" target="_blank" class="btn btn-outline-info btn-lg">
+    🚀 Enter Here
+  </a>
 </body>
 </html>
 
