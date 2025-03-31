@@ -3,76 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shelby Dixon | Portfolio</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body class="bg-dark text-white">
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-  <a class="navbar-brand" href="#">Shelby Dixon</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-      <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- Landing Section -->
-<section class="text-center my-5">
-  <h1 class="display-4">Hi, I'm Shelby Dixon</h1>
-  <p class="lead">AI • Cybersecurity • Robotics • Hardware Acceleration</p>
-  <div class="d-flex justify-content-center mt-4">
-    <a href="projects.html" class="btn btn-primary btn-lg mx-2">View My Work</a>
-    <a href="skills.html" class="btn btn-outline-light btn-lg mx-2">View My Skills</a>
-  </div>
-</section>
-
-<!-- Chatbot Placeholder -->
-<div id="chatbot-toggle-container" class="text-center mb-5">
-  <button onclick="toggleChatbot()" class="btn btn-primary btn-lg">
-    🤖 Toggle Chatbot
-  </button>
-</div>
-<div id="chatbot-container"></div>
-
-<!-- Footer -->
-<footer class="bg-secondary text-white text-center py-4">
-  <p>&copy; 2025 Shelby Dixon | 
-    <a href="https://www.linkedin.com/in/shelby-dixon-531096308/" class="text-white" target="_blank">LinkedIn</a>
-  </p>
-</footer>
-
-<!-- Scripts -->
-<script>
-  function toggleChatbot() {
-    const container = document.getElementById("chatbot-container");
-
-    if (!container.dataset.loaded) {
-      fetch("chatbot.html")
-        .then(res => res.text())
-        .then(html => {
-          container.innerHTML = html;
-          container.dataset.loaded = "true";
-        });
-    } else {
-      container.classList.toggle("d-none");
+  <title>Welcome | Shelby Dixon</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at center, #d1f3ff, #a0d8ef);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Helvetica Neue', sans-serif;
+      overflow: hidden;
     }
-  }
-</script>
-<script src="assets/js/chatbot.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    .spinner {
+      border: 5px solid #e0f7ff;
+      border-top: 5px solid #007BFF;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .enter-btn {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .enter-btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div id="loader" class="spinner"></div>
 
+  <div id="main" class="container">
+    <a href="https://sdixon4.github.io/interactive-tech-tapestry/" target="_blank">
+      <button class="enter-btn">✨ Enter Here ✨</button>
+    </a>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('loader').style.display = 'none';
+      document.getElementById('main').style.display = 'flex';
+    }, 1500); // spinner duration in ms
+  </script>
 </body>
 </html>
 
