@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome</title>
+  <title>Enter the Portal</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     html, body {
@@ -11,9 +11,9 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-      background-color: #111;
-      color: #fff;
+      background-color: #0a0a0a;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
     }
     #particles-js {
       position: absolute;
@@ -30,14 +30,37 @@
       align-items: center;
       height: 100vh;
       opacity: 0;
-      animation: fadeIn 1.5s ease-in-out forwards;
+      animation: fadeIn 2s ease-in-out forwards;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #80d0c7, #13547a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s infinite;
+    }
+    .btn-magic {
+      font-size: 1.2rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #80d0c7;
+      color: #80d0c7;
+      background-color: transparent;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+    .btn-magic:hover {
+      background: #80d0c7;
+      color: #0a0a0a;
+      box-shadow: 0 0 15px #80d0c7;
     }
     @keyframes fadeIn {
       to { opacity: 1; }
     }
-    .emoji {
-      font-size: 3rem;
-      margin-bottom: 20px;
+    @keyframes shimmer {
+      0% { background-position: -100% 0; }
+      100% { background-position: 100% 0; }
     }
   </style>
 </head>
@@ -46,12 +69,11 @@
 <div id="particles-js"></div>
 
 <div class="content">
-  <div class="emoji">👋</div>
-  <h2 class="mb-4">Ready to Explore?</h2>
+  <h2>Ready to explore? <br>Enter here.</h2>
   <a href="https://interactive-tech-tapestry.lovable.app"
-     class="btn btn-outline-info btn-lg"
+     class="btn btn-magic mt-3"
      onclick="document.getElementById('click-sound').play()">
-    🚀 Enter Here
+    ✨ Step Into the Portal ✨
   </a>
 </div>
 
@@ -59,15 +81,15 @@
   <source src="https://assets.mixkit.co/sfx/preview/mixkit-game-click-1114.mp3" type="audio/mpeg">
 </audio>
 
-<!-- particles.js CDN -->
+<!-- Particles -->
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
 <script>
   tsParticles.load("particles-js", {
-    background: { color: { value: "#111" } },
+    background: { color: { value: "#0a0a0a" } },
     fpsLimit: 60,
     particles: {
-      number: { value: 40 },
-      color: { value: "#ffffff" },
+      number: { value: 45 },
+      color: { value: "#80d0c7" },
       shape: { type: "circle" },
       opacity: { value: 0.2 },
       size: { value: 3 },
