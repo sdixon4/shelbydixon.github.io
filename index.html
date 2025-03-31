@@ -6,30 +6,77 @@
   <title>Welcome</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
       background-color: #111;
       color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      flex-direction: column;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
     }
-    .spinner-border {
-      width: 3rem;
-      height: 3rem;
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .emoji {
+      font-size: 3rem;
       margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="spinner-border text-info" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
-  <h2 class="mb-4">Getting things ready...</h2>
-  <a href="https://interactive-tech-tapestry.lovable.app" target="_blank" class="btn btn-outline-info btn-lg">
+
+<div id="particles-js"></div>
+
+<div class="content">
+  <div class="emoji">👋</div>
+  <h2 class="mb-4">Ready to Explore?</h2>
+  <a href="https://interactive-tech-tapestry.lovable.app" target="_blank"
+     class="btn btn-outline-info btn-lg"
+     onclick="document.getElementById('click-sound').play()">
     🚀 Enter Here
   </a>
+</div>
+
+<audio id="click-sound" preload="auto">
+  <source src="https://assets.mixkit.co/sfx/preview/mixkit-game-click-1114.mp3" type="audio/mpeg">
+</audio>
+
+<!-- particles.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+<script>
+  tsParticles.load("particles-js", {
+    background: { color: { value: "#111" } },
+    fpsLimit: 60,
+    particles: {
+      number: { value: 40 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.2 },
+      size: { value: 3 },
+      move: { enable: true, speed: 0.5 }
+    },
+    detectRetina: true
+  });
+</script>
+
 </body>
 </html>
 
